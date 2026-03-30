@@ -14,5 +14,13 @@ public class NoticiaController {
     public String noticias() {
         return "Noticias"; // <--- Nome do arquivo HTML (sem o .html)   
      }
-
+     @GetMapping ("/Seg/index") // <--- Define o endereço http://localhost:8080/Seg/index
+     public String SegIndex() {
+        return "Seg/index"; // <--- Nome do arquivo HTML (sem o .html)  
+         }
+    @GetMapping("/Seg/ExeSeg/painel")
+    public String ExeSegPainel() {
+        return "Seg/ExeSeg/painel"; // <--- Nome do arquivo HTML (sem o .html)  
+    }
 }
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Notícia</title>
+</head>
+
+<body>
+    <h1>Editar Notícia</h1>
+    <!-- O nome 'noticia' aqui deve ser igual ao model.addAttribute("noticia", ...) -->
+    <form th:action="@{/SalvarEdicao}" method="post" th:object="${noticia}">
+
+        <input type="hidden" th:field="*{id}" />
+        <label for="titulo">Título</label><br>
+        <input type="text" th:field="*{titulo}" id="titulo" /> <br>
+        <label for="assunto">Assunto</label> <br>
+        <input type="text" th:field="*{assunto}" id="assunto" /> <br>
+        <label for="autor">Autor</label> <br>
+        <input type="text" th:field="*{autor}" id="autor" /> <br>
+        <label for="email">Email</label> <br>
+        <input type="text" th:field="*{email}" id="email" /> <br>
+        <label for="dataNascimento">Data de Nascimento</label> <br>
+        <input type="date" th:field="*{dataNascimento}" id="dataNascimento" /> <br>
+        <label for="conteudo">Conteúdo</label> <br>
+        <textarea th:field="*{conteudo}" id="conteudo"></textarea> <br>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 package br.edu.utfpr.td.tsi.agencia.noticias;
 
 public class Noticia {
+    private String id;
     private String autor;
     private String email;
     private String dataNascimento;
@@ -8,10 +9,9 @@ public class Noticia {
     private String conteudo;
     private String titulo;
 
- // Adicione exatamente este bloco:
 public Noticia() {
+    // Construtor vazio necessário para o Spring criar a instância
 }
-
 
     public String getAutor() {
         return autor;
@@ -50,4 +50,17 @@ public Noticia() {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getConteudo() {
+        return conteudo;
+    }
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
+    
 }

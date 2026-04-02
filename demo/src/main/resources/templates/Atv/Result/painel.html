@@ -12,20 +12,22 @@
     <ul>
         <li th:each="noticia : ${noticias}">
             <h2 th:text="${noticia.titulo}">Título</h2>
+            <p><strong>ID:</strong> <span th:text="${noticia.id}">ID</span></p>
             <p><strong>Assunto:</strong> <span th:text="${noticia.assunto}">Assunto</span></p>
             <p><strong>Autor:</strong> <span th:text="${noticia.autor}">Autor</span></p>
             <p><strong>Email:</strong> <span th:text="${noticia.email}">Email</span></p>
             <p><strong>Data de Nascimento:</strong> <span th:text="${noticia.dataNascimento}">Data de Nascimento</span>
             </p>
             <p><strong>Conteúdo:</strong></p>
-            <p th:text="${noticia.assunto}">Conteúdo da notícia</p>
-            <a href="/Editar">Editar</a>
-            <!-- Passamos os atributos para o Spring montar o objeto 'noticia' do teu método -->
+            <p th:text="${noticia.conteudo}">Conteúdo da notícia</p>
             <a
-                th:href="@{/Excluir(autor=${noticia.autor}, assunto=${noticia.assunto}, email=${noticia.email})}">Excluir</a>
+                th:href="@{/Editar(id=${noticia.id})}">Editar</a>
+            <!-- Passamos os atributos para o Spring montar o objeto 'noticia' do teu método -->
+            <a th:href="@{/Excluir(id=${noticia.id}, assunto=${noticia.assunto})}">Excluir</a>
 
         </li>
     </ul>
+    <a href="/cadastrar"> Voltar para cadastro</a>
 </body>
 
 </html>

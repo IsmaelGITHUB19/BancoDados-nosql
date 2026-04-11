@@ -4,45 +4,159 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastrar Notícia</title>
+    <style>
+        /* Configurações Gerais */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container do Formulário */
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        /* Grupos de Input */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #dadce0;
+            border-radius: 8px;
+            box-sizing: border-box; /* Essencial para o padding não quebrar o layout */
+            font-size: 15px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* Botão */
+        button {
+            width: 100%;
+            background-color: #1a73e8;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #1557b0;
+        }
+
+        /* Link de Voltar */
+        .link-area {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link-area a {
+            color: #5f6368;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link-area a:hover {
+            color: #1a73e8;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Cadastrar notícia</h1>
+    <div class="form-container">
+        <h1>Cadastrar notícia</h1>
 
-    <!-- O action precisa bater com o @PostMapping("/salvar") -->
-    <form action="/salvar" method="post">
-         <label for="id">ID</label><br>
-        <input type="text" name="id" id="id">
-        <br>
+        <form action="/salvar" method="post">
+            <div class="input-group">
+                <label for="id">ID</label>
+                <input type="text" name="id" id="id" placeholder="Ex: 001">
+            </div>
 
-        <label for="titulo">Título</label><br>
-        <input type="text" name="titulo" id="titulo">
-        <br>
+            <div class="input-group">
+                <label for="titulo">Título</label>
+                <input type="text" name="titulo" id="titulo" required>
+            </div>
 
-        <label for="autor">Nome do autor</label><br>
-        <input type="text" name="autor" id="autor"> <!-- 'name' idêntico à variável no Java -->
-        <br>
+            <div class="input-group">
+                <label for="autor">Nome do autor</label>
+                <input type="text" name="autor" id="autor" required>
+            </div>
 
-        <label for="email">Email do autor</label><br>
-        <input type="email" name="email" id="email">
-        <br>
+            <div class="input-group">
+                <label for="email">Email do autor</label>
+                <input type="email" name="email" id="email">
+            </div>
 
-        <label for="dataNascimento">Data de nascimento</label><br>
-        <input type="date" name="dataNascimento" id="dataNascimento">
-        <br>
+            <div class="input-group">
+                <label for="dataNascimento">Data de nascimento</label>
+                <input type="date" name="dataNascimento" id="dataNascimento">
+            </div>
 
-        <label for="assunto">Assunto</label><br>
-        <input type="text" name="assunto" id="assunto">
-        <br>
+            <div class="input-group">
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto" id="assunto">
+            </div>
 
-        <label for="conteudo">Conteúdo</label><br>
-        <textarea name="conteudo" id="conteudo"></textarea>
-        <br>
+            <div class="input-group">
+                <label for="conteudo">Conteúdo</label>
+                <textarea name="conteudo" id="conteudo" placeholder="Escreva sua notícia aqui..."></textarea>
+            </div>
 
-        <button type="submit">Cadastrar</button>
-    </form>
-    <br>
-    <a href="/imprimir">Ver noticias cadastradas</a>
+            <button type="submit">Cadastrar Notícia</button>
+        </form>
+
+        <div class="link-area">
+            <a href="/imprimir">← Ver notícias cadastradas</a>
+        </div>
+    </div>
 </body>
 
 </html>

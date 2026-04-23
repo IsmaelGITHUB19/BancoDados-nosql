@@ -5,7 +5,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 public class BancoDados {
-   private String connectionString = "mongodb+srv://ismael_db_user:Azul8088@mydatabase.aatbkbn.mongodb.net/";
+   private String connectionString = "mongodb+srv://ismael_db_user:*****@mydatabase.aatbkbn.mongodb.net/";
    private String database = "agencia_noticias";
    private MongoClient client;
    private MongoDatabase db;

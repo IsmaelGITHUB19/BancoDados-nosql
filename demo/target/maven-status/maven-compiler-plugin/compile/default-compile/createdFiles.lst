@@ -1,3 +1,6 @@
-br\edu\utfpr\td\tsi\agencia\noticias\NoticiaController.class
-br\edu\utfpr\td\tsi\agencia\noticias\Noticia.class
-br\edu\utfpr\td\tsi\agencia\noticias\AgenciaNoticiasApplication.class
+br/edu/utfpr/td/tsi/agencia/noticias/AgenciaNoticiasApplication.class
+br/edu/utfpr/td/tsi/agencia/noticias/model/Autor.class
+br/edu/utfpr/td/tsi/agencia/noticias/Main.class
+br/edu/utfpr/td/tsi/agencia/noticias/model/Noticia.class
+br/edu/utfpr/td/tsi/agencia/noticias/persistencia/BancoDados.class
+br/edu/utfpr/td/tsi/agencia/noticias/controller/NoticiaController.class

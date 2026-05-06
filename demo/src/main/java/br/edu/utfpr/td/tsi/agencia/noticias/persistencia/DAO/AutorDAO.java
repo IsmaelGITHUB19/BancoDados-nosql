@@ -14,7 +14,7 @@ public class AutorDAO implements GenericDAO<Autor> {
 
     @Override
     public void inserir(Autor objeto) {
-        String connectionString = "mongodb+srv://ismael_db_user:Azul8088@mydatabase.aatbkbn.mongodb.net/";
+        String connectionString = "mongodb+srv://ismael_db_user:*****@mydatabase.aatbkbn.mongodb.net/";
         String database = "agencia_noticias";
         MongoClient client;
         MongoDatabase db;
@@ -37,7 +37,7 @@ public class AutorDAO implements GenericDAO<Autor> {
 
     @Override
     public Autor buscar(String nome) {
-        String connectionString = "mongodb+srv://ismael_db_user:Azul8088@mydatabase.aatbkbn.mongodb.net/";
+        String connectionString = "mongodb+srv://ismael_db_user:*****@mydatabase.aatbkbn.mongodb.net/";
         String database = "agencia_noticias";
 
         try {
@@ -69,7 +69,7 @@ public class AutorDAO implements GenericDAO<Autor> {
 
     @Override
     public void atualizar(Autor objeto) {
-        String connectionString = "mongodb+srv://ismael_db_user:Azul8088@mydatabase.aatbkbn.mongodb.net/";
+        String connectionString = "mongodb+srv://ismael_db_user:*****@mydatabase.aatbkbn.mongodb.net/";
         String database = "agencia_noticias";
         MongoClient client;
         MongoDatabase db;
@@ -92,7 +92,7 @@ public class AutorDAO implements GenericDAO<Autor> {
 
     @Override
     public void excluir(String id) {
-        String connectionString = "mongodb+srv://ismael_db_user:Azul8088@mydatabase.aatbkbn.mongodb.net/";
+        String connectionString = "mongodb+srv://ismael_db_user:*****@mydatabase.aatbkbn.mongodb.net/";
         String database = "agencia_noticias";
         MongoClient client;
         MongoDatabase db;

@@ -8,7 +8,6 @@ public class Noticia {
     private Autor autor;
 
 public Noticia() {
-    // Construtor vazio necessário para o Spring criar a instância
 }
 
     public String getAssunto() {
@@ -36,5 +35,10 @@ public Noticia() {
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
     }
-    
+    public Autor getAutor() {
+        return autor;
+    }
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
 }
